@@ -96,7 +96,7 @@ class Column extends Fluent
      * @param  string|null  $title
      * @return Column
      */
-    public static function computed(string $data, string $title = null): Column
+    public static function computed(string $data, string $title = null): self
     {
         if (is_null($title)) {
             $title = self::titleFormat($data);

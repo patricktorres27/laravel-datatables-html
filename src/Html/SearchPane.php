@@ -141,7 +141,7 @@ class SearchPane extends Fluent
     }
 
     /**
-     * @param  boolean  $value
+     * @param  bool  $value
      * @return $this
      * @see https://datatables.net/reference/option/searchPanes.orderable
      */
@@ -185,7 +185,7 @@ class SearchPane extends Fluent
     }
 
     /**
-     * @param  boolean  $value
+     * @param  bool  $value
      * @return $this
      * @see https://datatables.net/reference/option/searchPanes.viewTotal
      */
@@ -197,7 +197,7 @@ class SearchPane extends Fluent
     }
 
     /**
-     * @param  boolean  $value
+     * @param  bool  $value
      * @return $this
      * @see https://datatables.net/reference/option/searchPanes.viewTotal
      */
@@ -216,7 +216,7 @@ class SearchPane extends Fluent
      * @param  string  $key
      * @return $this
      */
-    public function modelOptions(EloquentBuilder|string $model, string $value, string $key = 'id'): SearchPane
+    public function modelOptions(EloquentBuilder|string $model, string $value, string $key = 'id'): self
     {
         return $this->options(
             Options::model($model, $value, $key)

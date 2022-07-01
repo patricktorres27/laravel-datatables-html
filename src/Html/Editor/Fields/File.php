@@ -139,7 +139,8 @@ class File extends Field
     public function displayImage(): static
     {
         // TODO: Use Laravel filesystem instead of hard coded storage path
-        return $this->display(<<<SCRIPT
+        return $this->display(
+            <<<'SCRIPT'
             function (file_id) { 
                 return file_id ? '<img src="storage/' + file_id + '" alt=""/>' : null; 
             }
@@ -165,7 +166,7 @@ SCRIPT
      */
     public function displayFile(): static
     {
-        return $this->display("function (file_id) { return file_id; }");
+        return $this->display('function (file_id) { return file_id; }');
     }
 
     /**

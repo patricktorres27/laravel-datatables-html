@@ -149,6 +149,7 @@ class FormOptions extends Fluent
 
         return $this;
     }
+
     /**
      * @param  string  $value
      * @return $this

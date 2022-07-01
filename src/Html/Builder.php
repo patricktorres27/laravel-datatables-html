@@ -21,14 +21,21 @@ class Builder
     use Columns\Checkbox;
 
     // Select plugin constants.
-    const SELECT_STYLE_API = 'api';
-    const SELECT_STYLE_SINGLE = 'single';
-    const SELECT_STYLE_MULTI = 'multi';
-    const SELECT_STYLE_OS = 'os';
-    const SELECT_STYLE_MULTI_SHIFT = 'multi+shift';
-    const SELECT_ITEMS_ROW = 'row';
-    const SELECT_ITEMS_COLUMN = 'column';
-    const SELECT_ITEMS_CELL = 'cell';
+    public const SELECT_STYLE_API = 'api';
+
+    public const SELECT_STYLE_SINGLE = 'single';
+
+    public const SELECT_STYLE_MULTI = 'multi';
+
+    public const SELECT_STYLE_OS = 'os';
+
+    public const SELECT_STYLE_MULTI_SHIFT = 'multi+shift';
+
+    public const SELECT_ITEMS_ROW = 'row';
+
+    public const SELECT_ITEMS_COLUMN = 'column';
+
+    public const SELECT_ITEMS_CELL = 'cell';
 
     /**
      * @var Collection<int, \Yajra\DataTables\Html\Column>
@@ -133,7 +140,8 @@ class Builder
     public function getOptions(): array
     {
         return array_merge(
-            $this->attributes, [
+            $this->attributes,
+            [
                 'ajax' => $this->ajax,
                 'columns' => $this->collection->map(function (Column $column) {
                     $column = $column->toArray();
@@ -176,8 +184,10 @@ class Builder
         $htmlAttr = $this->html->attributes($this->tableAttributes);
 
         $tableHtml = '<table'.$htmlAttr.'>';
-        $searchHtml = $drawSearch ? '<tr class="search-filter">'.implode('',
-                $this->compileTableSearchHeaders()).'</tr>' : '';
+        $searchHtml = $drawSearch ? '<tr class="search-filter">'.implode(
+            '',
+            $this->compileTableSearchHeaders()
+        ).'</tr>' : '';
         $tableHtml .= '<thead><tr>'.implode('', $th).'</tr>'.$searchHtml.'</thead>';
         if ($drawFooter) {
             $tf = $this->compileTableFooter();

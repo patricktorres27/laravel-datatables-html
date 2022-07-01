@@ -26,11 +26,15 @@ class Editor extends Fluent
 
     public array $events = [];
 
-    const DISPLAY_LIGHTBOX = 'lightbox';
-    const DISPLAY_ENVELOPE = 'envelope';
-    const DISPLAY_BOOTSTRAP = 'bootstrap';
-    const DISPLAY_FOUNDATION = 'foundation';
-    const DISPLAY_JQUERYUI = 'jqueryui';
+    public const DISPLAY_LIGHTBOX = 'lightbox';
+
+    public const DISPLAY_ENVELOPE = 'envelope';
+
+    public const DISPLAY_BOOTSTRAP = 'bootstrap';
+
+    public const DISPLAY_FOUNDATION = 'foundation';
+
+    public const DISPLAY_JQUERYUI = 'jqueryui';
 
     /**
      * Editor constructor.

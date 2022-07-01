@@ -106,7 +106,7 @@ trait HasAuthorizations
     }
 
     /**
-     * Check if instance is authorized
+     * Check if instance is authorized.
      *
      * @return bool
      */
